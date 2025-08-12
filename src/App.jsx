@@ -1,11 +1,22 @@
 import "./App.css";
 import AppNavigation from "./navigation/AppNavigation";
-import Home from "./pages/Home";
+import { LoadingBarContainer } from "react-top-loading-bar";
+import { Bounce, ToastContainer } from "react-toastify";
 
 function App() {
   return (
     <>
-      <AppNavigation />
+      <LoadingBarContainer>
+        <AppNavigation />
+        <ToastContainer
+          position="top-right"
+          autoClose={3000}
+          hideProgressBar={false}
+          closeOnClick={true}
+          pauseOnHover={true}
+          draggable={true}
+        />
+      </LoadingBarContainer>
     </>
   );
 }

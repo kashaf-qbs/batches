@@ -1,0 +1,13 @@
+@media screen {
+  .print-only {
+    position: absolute;
+    left: -9999px; 
+  }
+}
+
+@media print {
+  .print-only {
+    position: static;
+    left: auto;
+  }
+}

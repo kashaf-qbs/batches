@@ -13,7 +13,7 @@ const PrivateRoute = ({ isLoggedIn, children }) => {
 };
 
 const PublicRoute = ({ isLoggedIn, children }) => {
-  return isLoggedIn ? <Navigate to="/home" /> : children;
+  return isLoggedIn ? <Navigate to="/" /> : children;
 };
 
 const AppRoutes = ({ isLoggedIn, setIsLoggedIn }) => {
@@ -28,7 +28,7 @@ const AppRoutes = ({ isLoggedIn, setIsLoggedIn }) => {
         }
       />
       <Route
-        path="/home"
+        path="/"
         element={
           <PrivateRoute isLoggedIn={isLoggedIn}>
             <Home setIsLoggedIn={setIsLoggedIn} />
@@ -39,7 +39,7 @@ const AppRoutes = ({ isLoggedIn, setIsLoggedIn }) => {
       <Route
         path="*"
         element={
-          isLoggedIn ? <Navigate to="/home" /> : <Navigate to="/login" />
+          isLoggedIn ? <Navigate to="/" /> : <Navigate to="/login" />
         }
       />
     </Routes>
