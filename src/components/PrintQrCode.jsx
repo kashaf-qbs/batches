@@ -28,12 +28,12 @@ const PrintQrCode = ({ item }) => {
       <div className="mt-3 p-1 bg-white rounded w-fit">
         {/* Printable Content not shown in the UI*/}
         <div ref={contentRef} id={`qr-${item._id}`} className="print-only">
-          <div className="flex items-center gap-4 bg-white shadow-md rounded-xl p-4 border border-gray-200">
+          <div className="flex items-center gap-2 bg-white shadow-md rounded-xl p-4 border border-gray-200">
             <div className="flex-shrink-0 p-2 bg-gray-50 rounded-lg">
               <QRCode value={item?._id} size={96} level="H" />
             </div>
 
-            <div className="flex flex-col justify-center text-sm gap-2">
+            <div className="flex flex-col justify-center text-sm gap-1">
               <p className="font-semibold text-gray-800">
                 Product Name: <span className="font-normal">{item?.product_name}</span>
               </p>
